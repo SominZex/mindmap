@@ -1,11 +1,14 @@
 <html>
 <head>
   <script type="module" src="https://unpkg.com/@google/model-viewer/dist/model-viewer.min.js"></script>
-  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="styles.css"> <!-- Link to the new CSS file -->
 </head>
 <body>
-  <model-viewer id="mv-diagram" src="mindmap.glb" camera-controls></model-viewer>
+  <div class="model-viewer-wrapper">
+    <model-viewer id="mv-diagram" src="mindmap.glb" camera-controls></model-viewer>
+  </div>
   <script>
+    // this script is only needed to make hyperlinks work
     var modelViewer = document.querySelector("#mv-diagram");
     modelViewer.addEventListener("load", function () {
         var symbols = Object.getOwnPropertySymbols(modelViewer);
